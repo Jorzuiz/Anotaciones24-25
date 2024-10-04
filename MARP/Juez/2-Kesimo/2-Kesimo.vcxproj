@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{240072a3-67f3-4f5f-a20f-835fd155ced5}</ProjectGuid>
-    <RootNamespace>My1AVL</RootNamespace>
+    <ProjectGuid>{04d400cd-a276-4197-87e5-44eefd2ddf9c}</ProjectGuid>
+    <RootNamespace>My2Kesimo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,13 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1-AVL.cpp" />
+    <ClCompile Include="2-Kesimo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="casos.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="TreeSet_AVL_tami.h" />
+    <ClInclude Include="..\TreeSet_AVL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
