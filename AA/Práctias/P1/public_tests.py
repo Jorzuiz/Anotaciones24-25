@@ -44,7 +44,7 @@ def compute_cost_test(target):
 	print("Cost case 5")
 	assert  np.isclose(cost, 4.525), f"Case 5: Cost must be 4.525 but got {cost}"
 	print("Case 5 passed!")
-	print("\033[92mAll tests passed!")
+	print("\033[92mAll tests passed!\033[0m")
 	
 def compute_gradient_test(target):
 	print("Testing: compute_gradient_test")
@@ -56,7 +56,6 @@ def compute_gradient_test(target):
 	initial_b = 0.5
 	dj_dw, dj_db = target(x, y, initial_w, initial_b)
 	print("Case 1")
-	print(dj_dw,dj_db)
 	#assert dj_dw.shape == initial_w.shape, f"Wrong shape for dj_dw. {dj_dw} != {initial_w.shape}"
 	assert dj_db == 0.0, f"Case 1: dj_db is wrong: {dj_db} != 0.0"
 	assert np.allclose(dj_dw, 0), f"Case 1: dj_dw is wrong: {dj_dw} != [[0.0]]"
@@ -72,5 +71,5 @@ def compute_gradient_test(target):
 	assert dj_db == -2, f"Case 1: dj_db is wrong: {dj_db} != -2"
 	assert np.allclose(dj_dw, -10.0), f"Case 1: dj_dw is wrong: {dj_dw} != -10.0"   
 	print("Case 2 passed!")
-	print("\033[92mAll tests passed!")
+	print("\033[92mAll tests passed!\033[0m")
 	

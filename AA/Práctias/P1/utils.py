@@ -1,26 +1,48 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
-def cleanData(gamesData):
+def cleanData(data):
+    
     # numeros -> score(0-100), user score(0.0-10.0), critics users
 
     #limpia valores
-    gamesData['score'] = gamesData['score'].astype(np.float32)
-    #gamesData['score'].fillna(gamesData['score'].mean(), inplace = True)
-    #gamesData['score']= pd.to_numeric(gamesData['score'], errors='coerce')
-    gamesData['score']=gamesData['score'].div(10)
+    # Creamos una copia de las puntuacions SIN los valores anómalos para 
+    # poder calcular la media y reemplazarlos cin corromper los resultado
 
-    # Limpia valores tbd y convierte en float32
-    gamesData['user score'].replace('tbd', np.nan, inplace = True)
-    gamesData['user score'].fillna(np.nan)
-    gamesData['user score'] = gamesData['user score'].astype(np.float32)
+    mean = data.drop(data[data['user score'] =='tbd'].index)
+    mean = mean['user score']
+    mean = mean.astype(np.float64)
+    meanVal = mean.mean()
+    
+    #data = data.replace('tbd', {'user score':meanVal}, inplace = True)
+    data.replace('tbd', {'user score':meanVal}, inplace = True)
+    
+    # Los valores de los test se asemejan más al un drop, cambia la linea de arriba por esta para comprobarlo
+    #data = data.drop(data[data['user score'] =='tbd'].index)
+    
+    data['user score'] = data['user score'].astype(np.float64)
+    
+    data['score'] = data['score'].astype(np.float64)
+    data['score'] = data['score'].fillna(0)
+    data["score"] = data["score"] / 10
+    return data
 
-    return gamesData
 
 def load_data_csv(path,x_colum,y_colum):
     data = pd.read_csv(path)
     data = cleanData(data)
     X = data[x_colum].to_numpy()
     y = data[y_colum].to_numpy()
+    
     return X, y
+
+def plot_data(x):
+
+    plt.scatter(x['user score'], x['score'], marker = '.')
+    plt.xlabel('User Score')
+    plt.ylabel('Score')
+    x.plot()
+    plt.show()
+    return 
