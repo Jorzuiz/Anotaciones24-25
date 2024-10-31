@@ -45,14 +45,14 @@ class LinearReg:
     def compute_cost_iterative(self):
         
         squared_error = 0
-        m = len(self.y) # Tamaño de la entrada
+        m = len(self.x) # Tamaño de la entrada
     
         # Mean Squared Error formula: iterative version
         for i in range(m):
             error = self.w * self.x[i] + self.b # Alternativamente podemos usar f_w_b
             squared_error += (error-self.y[i]) ** 2 
     
-        total_cost = (1 / (2 * m)) * squared_error
+        total_cost = squared_error / (2*m)
         return total_cost    
 
     def compute_cost(self):
@@ -61,7 +61,7 @@ class LinearReg:
     
         # Esta es la formula de coste de la funcion
         # Mean Squared Error formula
-        squared_error = np.sum((self.y - self.f_w_b(self.x)) ** 2) / (2*m) 
+        squared_error = np.sum((self.f_w_b(self.x)-self.y) ** 2) / (2*m) 
     
         #total_cost = (1 / (2 * m)) * np.sum(squared_error)
         return squared_error    
@@ -78,10 +78,11 @@ class LinearReg:
       dj_db (scalar): The gradient of the cost w.r.t. the parameter b     
      """
     def compute_gradient_iterative(self):
+
         dj_dw = 0
         dj_db = 0
-        m = len(self.y)
-        init = datetime.datetime.now()
+        m = len(self.x)
+        
         for i in range(m):
             #hypothesis = self.w * self.x[i] + self.b
             dj_dw += (self.f_w_b(self.x[i]) - self.y[i]) * self.x[i]
@@ -89,21 +90,17 @@ class LinearReg:
 
         dj_dw/=m
         dj_db/=m
-        print(f'Tiempo de procesamiento \033[91m iterativo: {datetime.datetime.now()-init}\033[0m')
+        
         return dj_dw, dj_db
 
     def compute_gradient(self):
 
         dj_dw = 0
         dj_db = 0
-
         m = len(self.x)
-        init = datetime.datetime.now()
-        #hypothesis = self.w * self.x + self.b
-    
+        
         dj_dw = np.sum((self.f_w_b(self.x) - self.y) * self.x ) / m
-        dj_db = np.sum((self.f_w_b(self.x) - self.y)) / m
-        print(f'Tiempo de procesamiento \033[91m vectorial: {datetime.datetime.now()-init}\033[0m')
+        dj_db = np.sum(self.f_w_b(self.x) - self.y) / m
         
         return dj_dw, dj_db
     
@@ -131,12 +128,14 @@ class LinearReg:
         w_initial = copy.deepcopy(self.w)  # avoid modifying global w within function
         b_initial = copy.deepcopy(self.b)  # avoid modifying global b within function
         
+        init = datetime.datetime.now()
         for i in range(num_iters):
             dj_dw, dj_db = self.compute_gradient_iterative()
             self.w -= alpha * dj_dw
             self.b -= alpha * dj_db
             J_history[i] = self.compute_cost_iterative()
 
+        print(f'Tiempo de procesamiento gradiente \033[91m iterativo: {datetime.datetime.now()-init}\033[0m')
         return self.w, self.b, J_history, w_initial, b_initial
 
     def gradient_descent(self, alpha, num_iters):
@@ -146,11 +145,14 @@ class LinearReg:
         w_initial = copy.deepcopy(self.w)  # avoid modifying global w within function
         b_initial = copy.deepcopy(self.b)  # avoid modifying global b within function
         
+        init = datetime.datetime.now()
         for i in range(0,num_iters):
             dj_dw, dj_db = self.compute_gradient()
             self.w -= alpha * dj_dw
             self.b -= alpha * dj_db
             J_history[i] = self.compute_cost()
+        print(f'Tiempo de procesamiento gradiente \033[91m vectorial: {datetime.datetime.now()-init}\033[0m')
+        
 
         return self.w, self.b, J_history, w_initial, b_initial
 
