@@ -17,7 +17,7 @@ def compute_cost_test(target):
     assert np.isclose(
         cost, target_cost, rtol=1e-4), f"Case 1: Cost must be {target_cost} for a perfect prediction but got {cost}"
 
-    print("\033[92mAll tests passed!")
+    print("\033[92mAll tests passed!\033[0m")
 
 
 def compute_gradient_test(target):
@@ -33,4 +33,4 @@ def compute_gradient_test(target):
     assert np.allclose(
         dj_dw, target_dj_dw, rtol=1e-02), f"Case 1: dj_dw is wrong: {dj_dw} != {target_dj_dw}"
 
-    print("\033[92mAll tests passed!")
+    print("\033[92mAll tests passed!\033[0m")

@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
 def cleanData(data):
     
     # numeros -> score(0-100), user score(0.0-10.0), critics users

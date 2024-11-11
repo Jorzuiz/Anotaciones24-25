@@ -126,11 +126,10 @@ class LinearRegMulti(LinearReg):
         
         for i in range(0,num_iters):
             dj_dw, dj_db = self.compute_gradient()
-            self.w = self.w - alpha * dj_dw
-            self.b = self.b - alpha * dj_db
+            self.w -= alpha * dj_dw
+            self.b -= alpha * dj_db
             J_history[i] = self.compute_cost() 
 
-        print(self.w)
         return self.w, self.b, J_history, w_initial, b_initial
     
 
