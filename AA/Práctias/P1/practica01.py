@@ -166,4 +166,3 @@ def test_gradient_descent_iterative(x_train, y_train, w, b):
     
     print("Case 2 passed!")
     print("\033[92mAll tests passed!\033[0m")
-#TO-DO the main program.
