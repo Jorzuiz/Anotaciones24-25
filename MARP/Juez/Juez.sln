@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33027.164
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1-AVL", "1-AVL\1-AVL.vcxproj", "{240072A3-67F3-4F5F-A20F-835FD155CED5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2-Kesimo", "2-Kesimo\2-Kesimo.vcxproj", "{04D400CD-A276-4197-87E5-44EEFD2DDF9C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-LaBatallaDeLasAudiencias", "10-LaBatallaDeLasAudiencias\10-LaBatallaDeLasAudiencias.vcxproj", "{55EB87D1-2C1F-497B-8F44-2B019C93DFF7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10.1-La cuerda de la cometa(168)", "10.1-La cuerda de la cometa(168)\10.1-La cuerda de la cometa(168).vcxproj", "{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{55EB87D1-2C1F-497B-8F44-2B019C93DFF7}.Release|x64.Build.0 = Release|x64
 		{55EB87D1-2C1F-497B-8F44-2B019C93DFF7}.Release|x86.ActiveCfg = Release|Win32
 		{55EB87D1-2C1F-497B-8F44-2B019C93DFF7}.Release|x86.Build.0 = Release|Win32
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Debug|x64.ActiveCfg = Debug|x64
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Debug|x64.Build.0 = Debug|x64
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Debug|x86.Build.0 = Debug|Win32
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Release|x64.ActiveCfg = Release|x64
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Release|x64.Build.0 = Release|x64
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Release|x86.ActiveCfg = Release|Win32
+		{7BEBCDCD-8465-443B-B95D-6801F8AD8B5B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

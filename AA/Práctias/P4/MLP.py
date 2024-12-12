@@ -43,15 +43,14 @@ class MLP:
     z2,z3 (array_like): signal fuction of two last layers
     """
     def feedforward(self,x):
-        a1,a2,a3,z2,z3 = 0
-
+        
         m = self._size(x)
         X1s = np.hstack([np.ones((m, 1)), x])	# Añade columna de 1 (bias)
 
-        a2 = self.sigmoid(np.dot(X1s, self.theta1.T))	    # Capa oculta, resultadod e aplicar pesos a la entrada
+        a2 = self._sigmoid(np.dot(X1s, self.theta1.T))	    # Capa oculta, resultadod e aplicar pesos a la entrada
         a2 = np.hstack([np.ones((m, 1)), a2])	# Añade columna de 1 (bias)
 
-        a3 = self.sigmoid(np.dot(a2, self.theta2.T))		# Capa de salida, resultado de aplicar pesos a la capa oculta
+        a3 = self._sigmoid(np.dot(a2, self.theta2.T))		# Capa de salida, resultado de aplicar pesos a la capa oculta
 
         return a1,a2,a3,z2,z3 # devolvemos a parte de las activaciones, los valores sin ejecutar la función de activación
 
