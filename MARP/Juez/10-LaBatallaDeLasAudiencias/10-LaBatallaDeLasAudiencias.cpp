@@ -37,7 +37,7 @@ bool resuelveCaso() {
     int rango, canales, actualizaciones;
     std::cin >> rango >> canales >> actualizaciones;
 
-    IndexPQ<int, greater<int>> cola(canales);
+    IndexPQ<int, gv  b  reater<int>> cola(canales);
     vector<pair<int, int>> resultados;
 
     // Lectura inicial de audiencia de cada canal

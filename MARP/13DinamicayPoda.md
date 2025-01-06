@@ -1,6 +1,6 @@
 # Semana 13: Ramificación y poda y árboles de juego
 
-##Objetivos:
+## Objetivos:
 
 >- Conocer el método algorítmico de ramificación y poda y saber aplicarlo en la resolución de problemas.
 
