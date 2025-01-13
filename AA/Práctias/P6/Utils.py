@@ -159,12 +159,12 @@ def sensores(data):
     plt.show()
 
 def sensores3D(salidaPCA, data):
-    # import matplotlib
-    # matplotlib.use('Qt5Agg')
+    import matplotlib
+    #matplotlib.use('Qt5Agg')
     
     # Esta brujería hace que se pueda ver en 3d supeustamente, 
     # mi patata no lo tira y tristemente no me dará tiempo a hacerlo con la torre antes de entregar :(
-    # matplotlib.use('TkAgg')
+    #matplotlib.use('TkAgg')
 
     principalDf = pd.DataFrame(data=salidaPCA, columns=['principal component 1', 'principal component 2', 'principal component 3'])
     visuales = pd.concat([principalDf, data['action']], axis=1)
@@ -188,4 +188,44 @@ def sensores3D(salidaPCA, data):
     ax.set_title('PCA con 3 Componentes', fontsize = 20)
     ax.legend()
     ax.grid()
+    plt.draw()
+
+def compareLoss(name, lossValue, name2, lossValue2):
+    
+    plt.plot(lossValue, label=name, color='blue')
+    plt.plot(lossValue2, label=name2, color='red')
+#        plt.scatter(lossValue, lossValue.size, label=ray_labels[i-1], color=ray_colors[i-1], s=5)
+#        plt.scatter()
+    plt.legend()
+    plt.title('Comparacion de pérdida en modelos')
+    plt.xlabel('Epoch')
+    plt.ylabel('Pérdida')
     plt.show()
+
+def confussionmatrix(model_name, y_test_reversed, predictions_reversed, model_name2, predictions_reversed2):
+    from sklearn.metrics import ConfusionMatrixDisplay, accuracy_score, confusion_matrix
+    import matplotlib.pyplot as plt
+
+
+    plt.suptitle('Matrices de confusión de ambos modelos')
+    cmap= 'Blues'
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+    
+    axes[0].set_title(model_name)
+
+    cm = confusion_matrix(y_test_reversed, predictions_reversed)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+    disp.plot(include_values=True, cmap=cmap, ax=axes[0])
+
+    axes[1].set_title(model_name2)
+
+    cm2 = confusion_matrix(y_test_reversed, predictions_reversed2)
+    disp2 = ConfusionMatrixDisplay(confusion_matrix=cm2)
+    disp2.plot(include_values=True, cmap=cmap, ax=axes[1])
+    
+    plt.show()
+    
+    accuracy = accuracy_score(y_test_reversed, predictions_reversed)
+    print(f"Precisión del modelo {model_name}: {accuracy}")    
+    accuracy2 = accuracy_score(y_test_reversed, predictions_reversed2)
+    print(f"Precisión del modelo {model_name2}: {accuracy2}")

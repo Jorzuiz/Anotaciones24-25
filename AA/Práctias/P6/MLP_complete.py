@@ -145,7 +145,6 @@ class MLP:
         
         return J + cost_reg
     
-
     """
     Get the class with highest activation value
 
@@ -159,10 +158,25 @@ class MLP:
     def predict(self, X):
         
         activaciones = self.feedforward(X)
-        prediccion = np.argmax(activaciones[-1],axis=1)
+        #prediccion = np.argmax(activaciones[-1],axis=1)
+        #print(f"Prediccion: {prediccion}")
+        return self.probabilityDecoder(activaciones[-1])
+        #return prediccion
+        #return activaciones[-1]
 
-        return prediccion
-    
+    def prob(self, X):
+            
+        activaciones = self.feedforward(X)
+        return (activaciones[-1])
+
+    def probabilityDecoder(self, probabilidades):
+
+        indice_maximo = np.argmax(probabilidades, axis=1)
+        num_muestras = probabilidades.shape[0]
+        num_clases = probabilidades.shape[1]
+        one_hot = np.zeros((num_muestras, num_clases))
+        one_hot[np.arange(num_muestras), indice_maximo] = 1
+        return one_hot
 
     """
     Compute the gradients of both theta matrix parámeters and cost J
@@ -281,7 +295,7 @@ class MLP:
         
     
     
-    def backpropagation(self, x, y, alpha, lambda_, numIte, verbose=0):
+    def backpropagation(self, x, y, alpha, lambda_, numIte, verbose=1):
         
         Jhistory = []
         
