@@ -87,6 +87,10 @@ def load_traces(path):
 
     data = pd.read_csv('Data/SensoresSeparados/combined_file.csv')
 
+    columns_to_clean = ["ray1", "ray2", "ray3", "ray4", "ray5", "kartx", "karty", "kartz", "time"]
+    for column in columns_to_clean:
+        data[column] = data[column].astype(np.float64).fillna(0)
+
     ray1 = data['ray1'].to_numpy()
     ray2 = data['ray2'].to_numpy()
     ray3 = data['ray3'].to_numpy()
@@ -229,3 +233,47 @@ def confussionmatrix(model_name, y_test_reversed, predictions_reversed, model_na
     print(f"Precisión del modelo {model_name}: {accuracy}")    
     accuracy2 = accuracy_score(y_test_reversed, predictions_reversed2)
     print(f"Precisión del modelo {model_name2}: {accuracy2}")
+
+def iteradorDeParametros(scaled_train_x, encoded_train, scaled_test_x, encoded_test, oneHotEncoder, input_size_range, alphas, lambdas, hidden_layer_sizes, num_iter=10000):
+    from sklearn.metrics import accuracy_score
+
+    alphas = [0.001, 0.01, 0.1]
+    lambdas = [0.0001, 0.001, 0.01, 0.1]
+    hidden_layer_sizes = [[10], [20], [10, 10], [20,10]]
+    input_size_range = scaled_train_x.shape[1]
+    num_iter = 10000
+
+    mejor_accuracy = -1
+    mejores_parametros = {}
+
+    for alpha in alphas:
+        for lambda_ in lambdas:
+            for hidden_layers in hidden_layer_sizes:
+                try:
+                    output_size = encoded_train.shape[1]
+                    #importar esto I guess
+                    mlp = MLP_complete.MLP(input_size_range, hidden_layers, output_size, seed=42, epislom=0.12)  # Semilla para reproducibilidad
+                    mlp.backpropagation(scaled_train_x, encoded_train, alpha, lambda_, num_iter)
+
+                    predicciones = mlp.predict(scaled_test_x)
+                    predictions_reversed = oneHotEncoder.inverse_transform(predicciones)
+                    y_test_reversed = oneHotEncoder.inverse_transform(encoded_test)
+
+                    accuracy = accuracy_score(y_test_reversed, predictions_reversed)
+
+                    if accuracy > mejor_accuracy:
+                        mejor_accuracy = accuracy
+                        mejores_parametros = {
+                            "input_size": input_size_range,
+                            "hidden_layers": hidden_layers,
+                            "alpha": alpha,
+                            "lambda": lambda_,
+                            "num_iter": num_iter
+                        }
+                    print(f"Probando: Input Size: {input_size_range}, Alpha: {alpha}, Hidden Layers: {hidden_layers}, Lambda: {lambda_}, Accuracy: {accuracy}")
+                except Exception as e:
+                    print(f"Error con la configuración Input Size: {input_size_range}, Alpha: {alpha}, Hidden Layers: {hidden_layers}, Lambda: {lambda_}: {e}")
+                    continue
+
+    print(f"Mejor accuracy encontrado: {mejor_accuracy}")
+    print(f"Mejores parámetros encontrados: {mejores_parametros}")

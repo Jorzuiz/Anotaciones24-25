@@ -1,14 +1,7 @@
-/*
- * MUY IMPORTANTE: Solo se corregirán los comentarios y el código
- * contenidos entre las etiquetas <answer> y </answer>.
- * Toda modificación fuera de esas etiquetas no será corregida.
- */
 
  /*@ <answer>
   *
-  * Indicad el nombre completo y usuario del juez de quienes habéis hecho esta solución:
-  * Estudiante 1:
-  * Estudiante 2:
+    MARP46 Jorge Zurdo Izquierdo
   *
   *@ </answer> */
 
@@ -16,14 +9,15 @@
 #include <fstream>
 #include <algorithm>
 #include <vector>
+
 using namespace std;
 
-#include "TreeSet_AVL_tami.h"
+#include "bintree.h"
 
 /*@ <answer>
 
- Escribe aquí un comentario general sobre la solución, explicando cómo
- se resuelve el problema.
+Generamos un nuevo método que calcula la altura de cada nodo de manera recursiva
+No es necesario almacenarla porque no estamos creando una clase nueva
 
  @ </answer> */
 
@@ -31,23 +25,60 @@ using namespace std;
  // Escribe el código completo de tu solución aquí debajo (después de la marca)
  //@ <answer>
 
-void resuelveCaso() {
-    int N;
-    cin >> N;
-    if (N == 0)
-        return false;
+// Medidor de altura
+// No tenemos que almacenarlo en la clase BinTree, pero tendremos que contar la altura para saber si es AVL
+// Cada llamada recursiva se suma a la altura hacia arriba y se queda con el hijo mayor
+// Coste de O(N) puesto que pasa por todos los nodos del arbol
+template <typename T>
+int altura(const BinTree<T>& a) {
+    if (a.empty())
+        return 0;
+    else return 1 + max(altura(a.left()), altura(a.right()));
+}
 
-    // los valores de la entrada se insertan en el conjunto
-    Set<int> cjto;
-    int valor;
-    for (int i = 0; i < N; ++i) {
-        cin >> valor;
-        cjto.insert(valor);
+// Método que comprueba las alturas de los hijos de un arbol para saber si es AVl
+// Sus hijos tambien deben ser AVL
+template <typename T>
+bool esAVL(const BinTree<T>& arbol) {
+
+    if (arbol.empty())   return true;
+
+    int alturaIz = altura(arbol.left());
+    int alturaDer = altura(arbol.right());
+    int comparador = abs(alturaIz - alturaDer);
+    
+    // Para que sea AVL ademas hay que comprobar que si existen los valores respeten orden
+    bool AVL = true;
+    if (!arbol.left().empty())
+        AVL = (arbol.left().root() < arbol.root());
+    if (!arbol.right().empty())
+        AVL = (arbol.right().root() > arbol.root() && AVL);
+
+    // Importante el valor absoluto, te ahorra quebraderos de cabeza
+    // Para que sea AVL tiene que ser AVL y sus hijos tambien
+    return (comparador <= 1) && AVL && esAVL(arbol.left()) && esAVL(arbol.right());
+}
+
+
+bool resuelveCaso() {
+
+    char tipo;  // Tipo N para enteros, tipo P para palabras
+    cin >> tipo;
+
+    if (tipo == 'N') {        // tipo INT
+
+        BinTree<int> arbol = read_tree<int>(cin);
+
+        if (esAVL(arbol))   cout << ("SI\n");
+        else                cout << ("NO\n");
     }
+    else if (tipo == 'P') {   // tipo STRING
 
-    // COMPLETAR
+        BinTree<string> arbol = read_tree<string>(cin);
 
-    cout << "---\n";
+        if (esAVL(arbol))   cout << ("SI\n");
+        else                cout << ("NO\n");
+    }
 
     return true;
 }
