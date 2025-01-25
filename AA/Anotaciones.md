@@ -193,3 +193,35 @@ El comando values ha sacado la columna Y y la ha transformado en un vector en ve
 Listo :3
 
 ## Preparación y entrenamiento del modelo
+
+para entrenar el modelo tendremos que hacer separacion de los datos en un set de `entrenamiento` y `test`.
+Sklearn nos proporciona un metodo para esto.
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=42)
+```
+
+Random State es una seed de aleatorización reproducible y test size mide el tamaño de los grupos, buscamos una separación 80/20, ¿porque?
+
+Para evitar sesgos lo que queremos es entrenamr el modelo con nuestros datos y tambien comprobarlo sobre datos NO ENTRENADOS (De ahí la separación del modelo inicial), de este modo nos aseguramos de que realmente hemos aprendido a detectar las enfermedades cardiovasculares en una persona y no a detectar si una persona tiene una enfermedad solo por haberse hecho un TAC en una maquina en concreto (caso real).
+
+Este proceso tiene que hacerse demanera continua y se conoce como `Data Science`, requiere de actualizaciones frecuentes del modelo, ajustes en los hiperparámetros y de recogida de nuevos datos continua para ello.
+
+Bueno, ahora tenemos otro problema. Hemos usado el Standard Scaler y el Imputer sobre los datos ANTES de ser separados, eso quiere decir que  tanto en Train como en Test hay valores medios del conjunto TOTAL, esto es un leak.
+
+Más concretamente, los valores se han agrupado respecto a una media, en este caso de un los hospitales de Madurd, y vamos a comprobar respecto ala media de esos mismos  hospitales, cuando lo que deberiamos de haber hecho es entrenarnos con datos de unos pacientes aleatorios y comprobar OTROS PACIENTES DIFERENTES con media diferente.
+
+Toca hacerlo todo de nuevo?
+>Si
+---
+Me voy a comer
+
+---
+
+Existen más técnicas para preparar los datos como la Cross-Validation
+
+$$ \frac{\boxed{\boxed{Test}\boxed{Test}\boxed{Train}\boxed{Test}\boxed{Test}}
+{\boxed{}\boxed{}\boxed{}\boxed{}\boxed{}}} $$
+
+$$ \begin{matrix} \boxed{test}  \boxed{train} \\ \boxed{1} \boxed{2} \end{matrix}$$
