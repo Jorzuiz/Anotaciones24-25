@@ -146,6 +146,8 @@ def frecuencias(data):
     plt.show()
 
 def sensores(data):
+
+    plt.xkcd()
     plt.figure(figsize=(12, 6))  # Ajustar el tamaño de la figura para mejor visualización
 
     ray_colors = ['blue', 'orange', 'green', 'red', 'purple'] #Colores para cada rayo
