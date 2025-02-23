@@ -3,6 +3,12 @@
 # Cosas que recordar
 - Shield Recharge Roll: habilidades que te pidan hacer esto te curan, tira dados del tamaño que uses para subir nivel. 1 dado por nivel de luz más tu modificador de habilidad de Luz.
 - Scope: 10/50/200 los primeros 2 son distancia sin / con desventaja. Si apuntas (15 pies de movimiento) se cambiarian por los ultimos 2. No puedes disparar el tercero sin apuntar.
+- Recarga: item action (proficency), si no full action
+- Cambio de arma: free action
+- Payload Weapon: Salvación de Dex contra 8 + Proficency + Dex/Str del arma
+- Con cobertura completa tienes la opcion de "asomarte" a 3/4 (+5CA) o disparar a la "libanesa" (Mantienes full cober pero solo puedes acertar con un 20)
+- Fuego de cobertura: haces un ranged attack y otorgas a un aliado media cobertura
+- Concentracion para supers y demas: Salvación de CON contra 1 o mitad del dañor ecibido
 
 # Acto 1
 Asalto tren, barracudas
@@ -20,6 +26,8 @@ Mision Death Stranding
 Contacto con rasputin 
 
 Atraco al banco - Nueva monarquia
+
+Asalto a un Keche
 
 Caida de la Casa de los Demonios
 Asalto al pico de Felwinter - Masion de Scarface - Gulag MW2

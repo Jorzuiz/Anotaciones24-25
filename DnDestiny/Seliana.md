@@ -27,16 +27,141 @@ Conversaciones y rumores se peuden descubrir si uno presta atención al bullicio
 El camerero es algo nuevo, asique Jarviks suele pasar gran parte del día ayudando cuando no se encuentra realizando otras tareas.
 
 > La "parte de atrás" contiene unas dependencias comunes que pueden albergar media docena de guardianes con una cocina
-> Nuevos NPCs aparecen relacionados con las misiones y que pueden ayuidar a los guardianes con la planificación de los golpes
+> Nuevos NPCs aparecen relacionados con las misiones y que pueden ayudar a los guardianes con la planificación de los golpes: ej, un eliksni es conocido de uno de los guardias de una guarida y puede no ir al trabajo ese dia por el lumen adecuado, un antiguo mecánico de Seliana puede conseguir planos del motor NSL que permite al equipo sabotearlo, etc
 
 ### Distrito comercial
 Antaño bullicioso y variado, tras la instalación de la Casa de los Demonios en el Pico de Felwinter cuenta con pocas tiendas centradas en equipamiento para supervivencia y un restaurante de Ramen.
+Un sastre eliksni se especializa en fabricar ropa robusta para el invierno con los materiales que le lleguen.
 
-El Acto 1 de la campaña se ambienta en un pueblo llamado Seliana a las afueras del Cosmódromo, en rusia. Durante el colapso muchas personas intentaron abandonar la tierra para salvarse pero acabaron muriendo en las proximidades de las naves colonia asique la zona suele ser de alcta actividad para guardianes resucitados.
-Jarviks, Eliksni(alien de cuatro brazos) tuvo un accidente cuando operaba por esa zona y su nave se estrelló. De los restos fundó un pueblo y con el paso del tiempo consiguió que humanos y eliskni vivieran en paz.
-Gran parte de esta paz surgió cuando se econtro con el personaje que llevaria tu nombre, una guardiana de apenas unos 4-5 años. Horrorizado Jarviks decidió adoptarla para que pudiese llevar una vida normal, lo cual inspiró a todo el mundo a ver que la coexistencia pacifica se puede alcanzar entre especies. 
-Ahora mismo tendria como 16-18 años y pese a los esfuerzos de jarviks ella quiere ayudar y sabe perfectamente el poder que tiene.
-NUNCA ha muerto y lo poco que Jarviks sabe de los guardianes le hace pensar que un espectro no te revive, solo devuelve tu cuerpo al estado original asique teme que si la pasa algo volvería estar indefensa ante los peligrso del mundo.
+>Sastre
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Atuendo casual|3/10|3lb.|150gl|
+|Atuendo formal|3/10|4lb.|750gl|
+|Poncho|3/10|1lb.|30gl|
+|Abrigo|3/10|3lb.|300gl|
+|Capa de Cazador|1/10|3lb.|1000gl|
+
+>Ferretería
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Caja de clavos 100|1/1|3lb|50gl|
+|Cubo|1/50|2lb|250gl|
+|Bungeecord|1/99|1lb|50gl|
+|Tiza (1 stick)|1/99|.01lb|10gl|
+|Palanca|1/99|5lb|25gl|
+|Cinta americana, 100ft.|1/50|3lb|50gl|
+|Taladro eléctrico|2/1|7lb|3,000gl|
+|Escalera, collapsable|5/1|12lb|5,000gl|
+|Candado, mechanical|2/10|3lb|3,000gl|
+|Aceite (1 quart)|1/1|2lb|1,000gl|
+|Alicates|1/99|1lb|100gl|
+|Tijeras|1/99|1lb|50gl|
+|Pala|1/99|5lb|25gl|
+|Tarp, 10x10ft.|11/50|4lb|550gl|
+|Tarp, 5x5ft.|4/50|2lb|200gl|
+|Caja estanca|1/10|18lb|250gl|
+|Cable trenzado, 50ft.|1/99|12lb|100gl|
+|Llave inglesa|1/50|3lb|250gl|
+|Kit de armadura|5/1|25lb.|7500|
+|Kit de Escalada|3/1|12lb.|1000|
+|Kit de cocina|5/1|32lb.|7500|
+|Kit de electrónica|5/1|10lb.|7500|
+|Kit médico|4/1|10lb.|6000|
+|Kit de buceo|5/1|55lb.|24000|
+|Kit de costura|3/1|8lb.|4500|
+|Kit de Ladrón|5/1|3lb.|5000|
+|Kit de vehículos|6/1|150lb.|52500|
+|Kit de armero|5/1|35lb.|7500|
+|Kit de talla|3/1|5lb.|1000|
+
+>Armería
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Ammunition|4/1|4lb|2,000gl|
+|Arrow|1/99|.02lb|10gl|
+|Martial magazine|1/50|1lb|250gl|
+|Rockets|4/10|2lb|1,000gl|
+|Simple magazine|1/50|1/2lb|100gl|
+
+>Supervivencia
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Backpack|3/10|3lb|750gl|
+|Binoculars|2/50|2lb|1,500gl|
+|Blanket, heated|4/10|3lb|1,000gl|
+|Blanket, wool|3/50|7lb|300gl|
+|Fold-out cot|4/1|18lb|6,000gl|
+|Folding chair|3/50|5lb|300gl|
+|Gas mask|2/1|1lb|3,000gl|
+|Hammock|4/1|4lb|2,000gl|
+|Hunting trap|1/50|25lb|750gl|
+|Knife belt|3/50|4lb|1,500gl|
+|LED light, handheld|2/1|2lb|2,000gl|
+|Lighter|2/1|2lb|2,000gl|
+|Pillow|1/50|1lb|250gl|
+|Quiver|1/99|1lb|50gl|
+|Ration (1 day)|2/99|2lb|20gl|
+|Sleeping bag|1/50|5lb|750gl|
+|Tent, two-person|12/1|40lb|18,000gl|
+|Water bottle|1/99|1lb|25gl|
+|Water filter|2/50|2lb|1,500gl|
+|Firewood bundle|3/10|12lb|1,500gl|
+|Gasoline (1 gal)|2/1|6lb|2,000gl|
+
+>Eletrónica
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Battery|2/50|.01lb|200gl|
+|Camera, digital|3/1|5lb|9,000gl|
+|Cellphone|4/1|2lb|20,000gl|
+|Computer, desktop|7/1|15lb|52,500gl|
+|Computer, tablet|4/1|4lb|20,000gl|
+|Floodlight|5/1|10lb|15,000gl|
+|Human voice synth|2/1|4lb|3,000gl|
+|Lock, digital|2/1|1lb|5,000gl|
+|Megaphone|2/1|3lb|2,000gl|
+|Motion-activated camera|2/1|3lb|6,000gl|
+|Plasma cutter|2/1|10lb|5,000gl|
+|Portable generator|6/1|30lb|45,000gl|
+|Portable heater|4/1|25lb|20,000gl|
+|Relay beacon|2/1|10lb|5,000gl|
+|Relay beacon, quantum|5/1|15lb|37,500gl|
+|Signal booster|2/1|1/2lb|3,000gl|
+|Signal jammer|2/1|1lb|3,000gl|
+|Surveillance drone|3/1|8lb|22,500gl|
+|Fan||||
+| Box|4/1|Small|2000gl|
+| Ceiling|4/1|Small|2000|
+| Table|2/1|Tiny|1000|
+| Coffee machine|3/1|Tiny|4500|
+| Freezer||||
+| Small|5/1|Small|15000|
+| Medium|6/1|Medium|18000|
+| Large|13/1|Large|39000|
+| Ice cream maker|3/1|Tiny|4500|
+| Industrial heater|6/1|medium|45000
+| Microwave|3/1|Tiny|4500|
+| Refrigerator|6/1|Medium|9000|
+| Rice cooker|3/1|Tiny|3000|
+| Stove|6/1|Medium|9000|
+| Toaster oven|5/1|Small|7500|
+| Memory|2/1|Tiny|1000|
+
+> Alimentación
+
+|Item|Memoria|Peso|Coste|
+|-|-|-|-|
+|Ration (1 day)|2/99|2lb|20gl|
+|Ether container			|
+|Large	1/10	5lb	500gl|
+|Medium	1/10	3lb	250gl|
+|Small	1/10	2lb	100gl|
 
 ## Rumores/Historias
 
