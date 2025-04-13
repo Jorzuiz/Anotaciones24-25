@@ -35,6 +35,8 @@ Un sastre eliksni se especializa en fabricar ropa robusta para el invierno con l
 
 >Sastre
 
+Morgana [(Fioraks)] NOMBRE SECRETO. Antigua espadachina de la casa de la justicia cansada de la violencia. Su misión de lealtad desbloquea la instructora de duelos.
+
 |Item|Memoria|Peso|Coste|
 |-|-|-|-|
 |Atuendo casual|3/10|3lb.|150gl|
@@ -79,6 +81,9 @@ Un sastre eliksni se especializa en fabricar ropa robusta para el invierno con l
 
 >Armería
 
+Tiffany, Kevin (Humanos) Se asentaron en Seliana cuando aun era una zona comercial cercana al cosmódromo. Solían escoltar caravanas de refugiados pero debido a la reciente actividad de la casa de los Demonios se establecieron permanentemente en Seliana y hacen lo que pueden por ayudar.
+
+
 |Item|Memoria|Peso|Coste|
 |-|-|-|-|
 |Ammunition|4/1|4lb|2,000gl|
@@ -88,6 +93,8 @@ Un sastre eliksni se especializa en fabricar ropa robusta para el invierno con l
 |Simple magazine|1/50|1/2lb|100gl|
 
 >Supervivencia
+
+Kevin, Tiffany (Humanos)
 
 |Item|Memoria|Peso|Coste|
 |-|-|-|-|
