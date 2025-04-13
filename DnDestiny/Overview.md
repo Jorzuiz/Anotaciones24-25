@@ -10,53 +10,92 @@
 - Fuego de cobertura: haces un ranged attack y otorgas a un aliado media cobertura
 - Concentracion para supers y demas: Salvación de CON contra 1 o mitad del dañor ecibido
 
-# Acto 1
+# Temporada de las Nuevas Luces
 Asalto tren, barracudas
 
 Base de operaciones mejorable - Theme of Seliana
 - Safehouse/bar (Espacio de convivencia y plothooks)
 - Distrito comercial comidas/bebidas, equiupamiento basico (El equipamiento aumenta segun se hace misiones)
-- Casa de Jarviks biblioteca/ayuntamiento (Planificacion e informacion de mundo)
+- Casa de Jarviks biblioteca/ayuntamiento/taller (Planificacion e informacion de mundo)
+
+Contacto con Rasputin - Clovis Bray (Stan-6/SABER)
 
 Rescatar servidor dañado - Mejorable
 Salvar armero - taller
 
 Mision Death Stranding
 
-Contacto con rasputin 
+Primer contacto con la ciudad
+Atraco al banco - Nueva monarquia (Contratista misterioso - Dragomante)
 
-Atraco al banco - Nueva monarquia
+Contactos en la última ciudad (Saladino-Zavala-Cayde-Ikora-Tyra)
 
-Asalto a un Keche
+Asalto a un Keche - Taniks
 
 Caida de la Casa de los Demonios
 Asalto al pico de Felwinter - Masion de Scarface - Gulag MW2
-"Soldado de invierno"
+Slayer descubre la identidad de Ela
+Muerte de Ela
+Jarviks y Slayer entran en modo berserk
+First Kill de Ela, salva a Jarviks de Taniks??
+
+Stan descubre el bunker de Serafín, acceso a armamento de Serafín
 
 # Acto 2
 
-Rescate de rasputin
+Rescate de Rasputin (Marte)
+Resurreción de Nokris
+Reconexión del sistema Estratega
 
 Atrapados en el tiempo - Era medieval (Ravenswatch) El primer Ahamkara
 La muerte de Coca - San Jorge
 Back in time
 
+Asesinos de Clovis (MGR)
 Samuel rodrigues (??) - perro robot??
-Guerra por la ciudad onírica
-Muerte de la dragomante
 
-# Acto 3
+Dragomante enseña la oscuridad a Stan
+
+# Season of the Wars
+Llegada de Oryx
+Incursión en la realidad Ascendente
+Restauración del Mundo Trono del Slayer/Samuel
+LOS VENGADORES
+
+Guerra por la ciudad onírica
+Incursión al Mundo Trono de Savathûn
+Plan de la Dragomante
+
+Stan perdido en el tiempo
+Últimos Serafines, Dragomante y Stan
+La "muerte" de Stan - El plan de la Dragomante (Último Gambito)
+La resurreción de Stan - Llamada de auxilio de la Dragomante
+
 Guerra Roja
+Alerta de la ciudad - Batalla por Seliana
+Sanctuary - Jarviks conecta con elnúcleo de SIVA y asciende a Jarviks Prime
+Sanctuary Rescata la última ciudad
+
+# Season of the Ahamkara
+
+Pérdida de la luz, Mundo Trono del Slayer
+Campaña de Destiny 2
+Intro en plan MW2
 Simulacion???
 
 Vuelta a Seliana - Dirtmouth
-Sanctuary 3 - 
 Cachés de la dragomante
+
+Guerra contra la facción oscura
+Facción Taranis
 
 Deep Stone Crypt
 
-Pelea de Mechas
-Megazord
+Plan de Titán (Gipsy Danger)
+Gipsy vs Corrupted Riven
+Light Megazord(?)
+
+
 Dos don nadies en medio de la nada peleandose sin motivo
 
 # Musica
@@ -70,9 +109,15 @@ Sanctuary 3 - Sanctuary
 The Farm - La granja
 
 > Acto 1
+The Winter Soldier - Stan-6
+The CauseWay (Winter Soldier)
 Serious Steel - Brey (Unlocked Striker)
+No rest for the Wicked - Nueva monarquía ()
+
 Armed to the teeth - Enfrentamiento
 Razormind - Enfrentamiento
+
+
 Panick Track (Remi Gallego) - Bosque infinito
 Malware Injection (Remi Gallego) - Bosque infinito
 noosphere - Bosque Infinito
@@ -95,7 +140,16 @@ The man Who sold The world - Dragomante
 Exit song for a movie - Second Timeline
 Hideout - Dragon's Den
 
+Sweet Dreams - Stan-4 Last Resource
+Ride of the Valkyries - Loki
+
 Sonne Orchestra - Megazord
+
+Taking a Stand (Winter Soldier)
+I Stand Alone (MW3)
+MW2 Intro
+
+Pride of a Demon - Alak-hûl
 
 # Armas y equipamiento notable
 
@@ -106,9 +160,17 @@ Lancer - GOW
 Gravity Gun - HL2
 VSS Vintorez - Vida real bruh
 Needle - Hollow Knight
-
+Espadas varias de la historia
 
 # Documentacion
 
 Casa de los demonios
 Europa, proyecto exo
+De donde salen los engramas
+MAteriales, donde
+Armas blancas/Verdes/azules/moradas, donde?
+Uso de armas alien
+Sistema de generación de lumen apra el pueblo
+Sistema de generación de guardianes para los timeskips
+Taranis/Riven
+Nueva Monarquía
